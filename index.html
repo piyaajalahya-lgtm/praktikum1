@@ -1,78 +1,108 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Halaman Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Login dan Registrasi</title>
+
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            outline: 0;
-            font-family: 'Open Sans', sans-serif;
+            box-sizing: border-box;
         }
 
         body {
-            height: 100vh;
-            background-image: url("https://bit.ly/2FPT1J9");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #087f5b;
+            padding: 15px;
         }
 
-        .container {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px 25px;
-            width: 300px;
-            background-color: rgba(0,0,0,0.7);
-            box-shadow: 0 0 10px rgba(255,255,255,0.3);
-        }
-
-        .container h1 {
-            text-align: left;
-            color: #fafafa;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            border-bottom: 4px solid #2979ff;
-        }
-
-        .container label {
-            text-align: left;
-            color: #90caf9;
-        }
-
-        .container form input {
-            width: calc(100% - 20px);
-            padding: 8px 10px;
-            margin-bottom: 15px;
-            border: none;
-            background-color: transparent;
-            border-bottom: 2px solid #2979ff;
-            color: #fff;
-            font-size: 20px;
-        }
-
-        .container form button {
+        .kotak {
+            background: #c9e4d8;
             width: 100%;
-            padding: 5px 0;
+            max-width: 350px;
+            padding: 20px 28px;
+            margin: 15px auto 20px;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 6px;
+            border: 1px solid #ccc;
+            background: white;
+        }
+
+        button {
+            width: 100%;
+            padding: 9px;
+            background: #399b60;
+            color: white;
             border: none;
-            background-color: #2979ff;
-            font-size: 18px;
-            color: #fafafa;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background: #267a48;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        a {
+            color: #71977e;
+        }
+
+        .lupa {
+            margin: 8px 0;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Login</h1>
+
+    <!-- FORM LOGIN -->
+    <div class="kotak">
+        <h2>Form Login</h2>
+
         <form>
-            <label>Username</label><br>
-            <input type="text"><br>
-            <label>Password</label><br>
-            <input type="password"><br>
-            <button>Log in</button>
+            <input type="email" placeholder="Masukkan email" required>
+            <input type="password" placeholder="Masukkan password" required>
+
+            <p class="lupa">
+                <a href="#">Lupa Password?</a>
+            </p>
+
+            <button type="submit">Login</button>
         </form>
+
+        <p>Belum punya akun? <a href="#registrasi">Daftar</a></p>
     </div>
+
+    <!-- FORM REGISTRASI -->
+    <div class="kotak" id="registrasi">
+        <h2>Form Registrasi</h2>
+
+        <form>
+            <input type="email" placeholder="Masukkan email" required>
+            <input type="password" placeholder="Masukkan password" required>
+            <input type="password" placeholder="Masukkan ulang password" required>
+
+            <button type="submit">Daftar</button>
+        </form>
+
+        <p>Sudah punya akun? <a href="#">Login</a></p>
+    </div>
+
 </body>
 </html>
